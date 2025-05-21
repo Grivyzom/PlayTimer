@@ -1,0 +1,17 @@
+name: PlayTimer
+version: 0.0.1
+main: gc.grivyzom.playtimer.PlayTimerPlugin
+api-version: 1.20
+commands:
+  playtimer:
+    description: Comando principal de PlayTimer.
+    usage: /playtimer <subcomando>
+    aliases: [pt]
+  playtime:
+    description: Shows your play time
+    usage: /playtime
+permissions:
+  playtimer.bypass:
+    description: Saltarse restricción diaria
+    default: op
+softdepend: [LuckPerms]

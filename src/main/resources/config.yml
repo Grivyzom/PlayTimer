@@ -1,0 +1,68 @@
+
+
+
+# PlayTimer - Configuración principal y avanzada
+
+general:
+  notify_update: true
+  info_message_on_join: true
+  auto_save_minutes: 5
+  daily_reset: "04:00"
+
+database:
+  type: mysql
+  host: localhost
+  port: 3306
+  name: playtimer_db
+  user: usuario
+  password: contraseña
+
+limits:
+  groups:
+    miembro: 14400   # 4 horas
+    vip: 28800       # 8 horas
+    legend: 43200    # 12 horas
+    op: 0            # 0 = sin límite
+  bypass_permission: playtimer.bypass
+
+bonuses:
+  enable_daily_bonus: true
+  enable_permanent_bonus: true
+  max_daily_bonus: 7200   # 2 horas extra
+  notify_on_bonus: true
+
+display:
+  action_bar: false
+  boss_bar:
+    enabled: true
+    color: RED
+    style: SEGMENTED_10
+
+notifications:
+  times:
+    "600":
+      - ""
+      - "{centered}&e¡Te quedan &710 minutos &ede juego hoy!"
+      - ""
+    "60":
+      - ""
+      - "{centered}&c&l¡Último minuto!"
+      - "{centered}&cSolo te queda &71 minuto &cpara jugar."
+      - ""
+    "30":
+      - ""
+      - "{centered}&4¡Atención!"
+      - "{centered}&cSolo quedan &730 segundos &cpara jugar."
+      - ""
+
+world_limits:
+  enabled: false
+  # Modo del sistema de mundos: "whitelist" = SOLO estos mundos consumen tiempo
+  #                           "blacklist" = TODOS menos estos consumen tiempo
+  mode: whitelist
+  worlds:
+    - world
+    - world_nether
+    - world_the_end
+
+# Fin del archivo de configuración
